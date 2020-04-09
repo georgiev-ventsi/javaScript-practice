@@ -20,4 +20,3 @@ const smallerNums = nums.map(num => num - 5);
 
 // Choose a method that will return a boolean value
 nums.some(num => num < 0);
-
