@@ -12,3 +12,8 @@ class Parent extends React.Component {
         return <Child name={this.state.name}/>
     }
 }
+
+ReactDOM.render(
+    <Parent />,
+    document.getElementById('app')
+)
