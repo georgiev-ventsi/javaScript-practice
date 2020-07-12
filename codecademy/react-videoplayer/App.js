@@ -13,16 +13,22 @@ const VIDEOS = {
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    this.chooseVideo = this.chooseVideo.bind(this);
     this.state = { src: VIDEOS.fast };
   }
   
+  chooseVideo(newVideo){
+    this.setState({
+      src: VIDEO[newVideo]
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Video Player</h1>
-        <Menu />
-        <Video />
+        <Menu chooseVideo={this.chooseVideo}/>
+        <Video src={this.state.src}/>
       </div>
     );
   }
